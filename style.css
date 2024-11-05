@@ -137,6 +137,7 @@ body {
     text-decoration: underline;
 }
 
+
 /* Sección Contacto */
 .contacto {
     padding: 40px 20px;
@@ -195,6 +196,7 @@ footer {
     width: 100%;
     height: auto;
     max-height: 300px;
+    /* Mantener altura máxima para Proyecto 1 */
     object-fit: cover;
     border-radius: 10px;
     margin: 20px 0;
@@ -222,4 +224,58 @@ footer {
     color: #666;
     line-height: 1.6;
     margin-bottom: 15px;
+}
+
+/* Estilo para los proyectos en la sección principal */
+.proyecto {
+    position: relative;
+    /* Posicionar relativamente para el texto superpuesto */
+    margin-bottom: 20px;
+}
+
+.proyecto img {
+    width: 100%;
+    /* Hacer las imágenes más pequeñas */
+    max-width: 300px;
+    /* Ajustar el ancho máximo de las imágenes */
+    height: auto;
+    border-radius: 8px;
+}
+
+.proyecto h3 {
+    position: absolute;
+    /* Posicionar el texto sobre la imagen */
+    bottom: 10px;
+    /* Alinear al fondo de la imagen */
+    left: 10px;
+    /* Margen izquierdo */
+    color: #fff;
+    /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    padding: 5px;
+    /* Espaciado alrededor del texto */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    z-index: 10;
+    /* Asegurar que el texto esté por encima de la imagen */
+}
+
+.proyecto a {
+    display: block;
+    /* Hacer que el área de clic ocupe toda la imagen */
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Altura completa */
+    position: absolute;
+    /* Posicionar absolutamente */
+    top: 0;
+    /* Alinear al borde superior */
+    left: 0;
+    /* Alinear al borde izquierdo */
+    background-color: rgba(255, 255, 255, 0);
+    /* Fondo transparente */
+    z-index: 5;
+    /* Asegurar que el enlace esté por encima de la imagen */
 }
