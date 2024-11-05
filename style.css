@@ -20,129 +20,28 @@ body {
     width: 100%;
     background-color: #007bff;
     padding: 20px 0;
-    /* Aumentar el padding superior e inferior */
+    /* Mayor padding para la barra superior */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-header h1 {
     color: #fff;
     text-align: center;
-    /* Centrar el título */
+    /* Centrado del título */
     margin-bottom: 10px;
-    /* Margen debajo del título */
+    /* Espacio inferior */
 }
 
 nav {
     text-align: center;
-    /* Centrar la navegación */
+    /* Centrar el menú de navegación */
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 15px;
-    /* Espacio entre enlaces */
-}
-
-/* Sección General */
-.container {
-    padding: 20px;
-    /* Padding alrededor del contenedor principal */
-    max-width: 1000px;
-    /* Ancho máximo para centrar el contenido */
-}
-
-/* Sección Proyecto 1 */
-.project-details {
-    padding: 30px;
-    /* Padding en la sección del proyecto */
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    /* Margen superior */
-}
-
-.project-image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.content-box {
-    margin-bottom: 30px;
-    /* Espacio entre las secciones del proyecto */
-    padding: 20px;
-    /* Padding interno */
-    background-color: #f9f9f9;
-    /* Color de fondo ligero */
-    border-radius: 8px;
-    /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil */
-}
-
-.section-title {
-    font-size: 1.5em;
-    /* Tamaño de fuente del título de sección */
-    margin-bottom: 15px;
-    /* Espacio debajo del título de sección */
-    border-bottom: 2px solid #007bff;
-    /* Línea debajo del título */
-    padding-bottom: 10px;
-    /* Espacio interno en la parte inferior del título */
-}
-
-.project-details p {
-    line-height: 1.6;
-    /* Mejora la legibilidad del texto */
-    margin-bottom: 15px;
-    /* Espacio debajo de los párrafos */
-}
-
-/* Sección Enlaces */
-.project-details .enlaces {
-    text-align: center;
-    /* Centrar los enlaces */
-}
-
-.project-details .enlaces a {
-    display: inline-block;
-    margin: 5px;
-    /* Espacio entre enlaces */
-    padding: 10px 15px;
-    /* Padding interno para apariencia de botón */
-    background-color: #007bff;
-    /* Color de fondo de los enlaces */
-    color: #fff;
-    /* Color del texto */
-    border-radius: 5px;
-    /* Bordes redondeados */
-    text-decoration: none;
-    /* Sin subrayado */
-}
-
-.project-details .enlaces a:hover {
-    background-color: #0056b3;
-    /* Color más oscuro al pasar el ratón */
-}
-
-/* Sección Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #007bff;
-    /* Color del fondo del footer */
-    color: white;
-    /* Color del texto en el footer */
-    width: 100%;
-    /* Ancho completo */
-    position: relative;
-    /* Posicionamiento para el footer */
-    bottom: 0;
-    /* Alinear al fondo */
+    /* Espacio lateral entre enlaces */
 }
 
 /* Sección Inicio */
@@ -150,6 +49,19 @@ footer {
     text-align: center;
     padding: 50px 20px;
     max-width: 800px;
+}
+
+.banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.inicio h1 {
+    font-size: 2em;
+    margin-top: 20px;
 }
 
 /* Sección Acerca de */
@@ -162,6 +74,11 @@ footer {
     text-align: center;
 }
 
+.acerca h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
 /* Sección Proyectos */
 .proyectos {
     padding: 50px 20px;
@@ -169,11 +86,15 @@ footer {
     text-align: center;
 }
 
+.proyectos h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
 .proyectos-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    /* Espacio entre los proyectos */
+    gap: 20px;
 }
 
 .proyecto-item {
@@ -184,6 +105,117 @@ footer {
     text-align: center;
     padding: 20px;
     transition: transform 0.3s;
-    margin: 10px 0;
-    /* Espacio adicional entre proyectos */
+}
+
+.proyecto-item:hover {
+    transform: scale(1.05);
+}
+
+.proyecto-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.proyecto-item h3 {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.proyecto-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.proyecto-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.proyecto-item a:hover {
+    text-decoration: underline;
+}
+
+/* Sección Contacto */
+.contacto {
+    padding: 50px 20px;
+    max-width: 800px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.contacto h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Sección Proyecto 1 */
+.proyecto1 {
+    padding: 30px 20px;
+    /* Reducido padding para mejorar el espaciado */
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20px auto;
+    /* Centrar la sección en la página */
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto1 h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.proyecto1 p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Sección para Descripción */
+.proyecto1 .descripcion {
+    margin-top: 20px;
+}
+
+/* Sección para Metodología */
+.proyecto1 .metodologia {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Sección para Conclusiones */
+.proyecto1 .conclusiones {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Sección para Enlaces */
+.proyecto1 .enlaces {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.proyecto1 .enlaces a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.proyecto1 .enlaces a:hover {
+    background-color: #0056b3;
 }
