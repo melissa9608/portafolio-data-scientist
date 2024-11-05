@@ -2,61 +2,65 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #0077cc;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
+header nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
-nav a {
-    color: #fff;
+header nav ul li a {
+    color: white;
     text-decoration: none;
 }
 
 h1,
 h2 {
-    color: #333;
+    margin: 20px 0;
 }
 
-.proyectos {
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
     padding: 20px;
 }
 
-.proyecto {
-    background: #fff;
-    border: 1px solid #ccc;
+.grid-item {
+    background-color: white;
+    border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.proyecto img {
+.grid-item img {
     width: 100%;
     height: auto;
 }
 
+.grid-item h3 {
+    margin: 10px 0;
+}
+
 footer {
-    background: #333;
-    color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
+    background-color: #0077cc;
+    color: white;
     position: relative;
     bottom: 0;
     width: 100%;
