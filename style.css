@@ -20,8 +20,8 @@ body {
 .project-header {
     width: 100%;
     background-color: #007bff;
+    /* Color de fondo de la barra */
     padding: 15px 0;
-    /* Reducir el padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: fixed;
     /* Fija la barra de navegación */
@@ -35,7 +35,6 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 5px;
-    /* Espaciado inferior reducido */
 }
 
 nav {
@@ -51,8 +50,8 @@ nav a {
 
 /* Espaciado para evitar que el contenido quede debajo de la barra */
 .container {
-    padding: 120px 20px;
-    /* Espacio superior para evitar superposición */
+    padding: 100px 20px;
+    /* Espacio superior ajustado */
     max-width: 1000px;
 }
 
@@ -60,7 +59,8 @@ nav a {
 .proyectos-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
+    /* Espaciado entre proyectos */
     width: 100%;
 }
 
@@ -68,35 +68,29 @@ nav a {
 .proyecto-item {
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    display: flex;
-    align-items: center;
+    text-align: left;
     padding: 20px;
     transition: transform 0.3s;
-    cursor: pointer;
-    border: 1px solid #e0e0e0;
-    /* Borde claro */
 }
 
 /* Imagen en la tarjeta del proyecto */
 .proyecto-item img {
-    max-width: 200px;
+    width: 100%;
+    max-height: 150px;
+    /* Altura máxima para un tamaño uniforme */
+    object-fit: cover;
     border-radius: 8px;
-    margin-right: 20px;
-    /* Separación entre la imagen y el texto */
+    /* Bordes redondeados para la imagen */
 }
 
 /* Texto dentro de la tarjeta */
-.proyecto-item div {
-    text-align: left;
-    flex: 1;
-}
-
 .proyecto-item h2 {
     font-size: 1.2em;
     color: #007bff;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .proyecto-item p {
@@ -118,7 +112,20 @@ nav a {
 .proyecto-item:hover {
     transform: scale(1.02);
     /* Efecto de zoom */
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para el banner principal */
+.inicio {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    /* Bordes redondeados para el banner */
+    background-color: #ffffff;
+    /* Fondo blanco para el banner */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    margin-top: 20px;
 }
 
 /* Sección Footer */
@@ -132,7 +139,7 @@ footer {
     bottom: 0;
 }
 
-/* Sección de información personal */
+/* Sección Acerca de */
 .acerca {
     background-color: #ffffff;
     padding: 30px 20px;
