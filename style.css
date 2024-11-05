@@ -3,66 +3,101 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo de página y centrar contenido */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    width: 100%;
 }
 
 /* Barra de Navegación */
 .navbar {
     background-color: #007bff;
-    padding: 10px 20px;
-}
-
-.navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 15px 20px;
+    text-align: center;
 }
 
 .navbar-logo {
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.8em;
     text-decoration: none;
 }
 
 .navbar-menu {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .navbar-menu li {
-    display: inline;
-    margin-left: 20px;
+    margin: 0 10px;
 }
 
 .navbar-menu a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline;
 }
 
 /* Sección Inicio */
 .inicio {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 .banner {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .inicio h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+/* Sección Acerca de */
+.acerca {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.acerca h2 {
     font-size: 2em;
-    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.acerca p {
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 /* Sección Proyectos */
 .proyectos {
-    padding: 50px 20px;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.proyectos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.proyectos h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .proyecto-item {
@@ -71,48 +106,72 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
     transition: transform 0.3s;
 }
 
 .proyecto-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .proyecto-item img {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .proyecto-item h3 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 15px 0;
 }
 
 .proyecto-item p {
-    padding: 0 15px 15px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
 }
 
-.btn-ver-mas {
+.proyecto-item a {
     display: inline-block;
     padding: 10px 20px;
-    margin-bottom: 15px;
     background-color: #007bff;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-.btn-ver-mas:hover {
+.proyecto-item a:hover {
     background-color: #0056b3;
 }
 
 /* Sección Contacto */
 .contacto {
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .contacto h2 {
-    font-size: 1.8em;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contacto p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contacto p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: #666;
 }
