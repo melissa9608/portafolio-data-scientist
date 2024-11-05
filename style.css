@@ -137,61 +137,6 @@ body {
     text-decoration: underline;
 }
 
-/* Sección específica para el Proyecto 1 */
-.project-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.project-header h1 {
-    font-size: 2em;
-    margin: 0;
-}
-
-.project-header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-.project-header nav a:hover {
-    text-decoration: underline;
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-.project-details .content-box {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-details .section-title {
-    font-size: 1.5em;
-    color: #007bff;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-}
-
-.project-details p {
-    font-size: 1em;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
 /* Sección Contacto */
 .contacto {
     padding: 40px 20px;
@@ -218,5 +163,63 @@ footer {
     padding: 20px 0;
     font-size: 0.9em;
     color: #666;
-    margin-top: 20px;
+}
+
+/* Estilos específicos para Proyecto 1 */
+
+/* Encabezado del Proyecto 1 */
+.project-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.project-header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.project-header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Imagen del Proyecto 1 */
+.project-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Detalles del Proyecto 1 */
+.project-details .content-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-details .section-title {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.project-details p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
