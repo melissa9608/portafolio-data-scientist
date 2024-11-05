@@ -4,73 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio de Ciencia de Datos</title>
+    <title>Mi Portafolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Bienvenido a Mi Portafolio</h1>
-        <nav>
-            <ul>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#inicio" class="navbar-logo">Portafolio</a>
+            <ul class="navbar-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
+    <!-- Sección Inicio -->
+    <section id="inicio" class="inicio">
+        <img src="imagenes/banner.jpg" alt="Imagen de portada" class="banner">
+        <h1>Bienvenido a mi Portafolio</h1>
+        <p>Mi nombre es Melissa Londoño, soy Científica de datos con experiencia en análisis de datos, machine learning
+            y visualización de datos.</p>
+    </section>
 
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <p>¡Hola! Soy Melissa, profesional en Química Industrial y Científica de Datos con experiencia en análisis
-                de datos, gestión de CRM y optimización de procesos. </p>
-            <p>Mi experiencia se centra en aplicar técnicas de machine learning y análisis estadístico para transformar
-                conjuntos de datos complejos en ideas clave, ayudando a tomar decisiones informadas y mejorar la
-                eficiencia en los proyectos.</p>
-            <p>Soy experta en Python, SQL y visualización de datos, y me especializo en convertir datos en información
-                valiosa para resolver problemas complejos y mejorar la eficiencia en proyectos. He trabajado en
-                migración de datos y desarrollo de modelos predictivos en varios campos.</p>
-        </section>
+    <!-- Sección Acerca de -->
+    <section id="acerca" class="acerca">
+        <h2>Acerca de Mí</h2>
+        <p>¡Hola! Soy Melissa, profesional en Química Industrial y Científica de Datos con experiencia en análisis
+            de datos, gestión de CRM y optimización de procesos.</p>
+        <p>Mi experiencia se centra en aplicar técnicas de machine learning y análisis estadístico para transformar
+            conjuntos de datos complejos en ideas clave, ayudando a tomar decisiones informadas y mejorar la
+            eficiencia en los proyectos.</p>
+        <p>Soy experta en Python, SQL y visualización de datos, y me especializo en convertir datos en información
+            valiosa para resolver problemas complejos y mejorar la eficiencia en proyectos. He trabajado en
+            migración de datos y desarrollo de modelos predictivos en varios campos.</p>
+    </section>
 
-
-        <section id="proyectos">
-            <h2>Mis Proyectos</h2>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <img src="images/imagen_proyecto1.jpeg" alt="Proyecto 1">
-                    <h3><a href="proyectos/proyecto1.html">Proyecto 1</a></h3>
-                </div>
-                <div class="grid-item">
-                    <img src="images/imagen_proyecto2.jpg" alt="Proyecto 2">
-                    <h3><a href="proyectos/proyecto2.html">Proyecto 2</a></h3>
-                </div>
-                <div class="grid-item">
-                    <img src="images/imagen_proyecto3.jpg" alt="Proyecto 3">
-                    <h3><a href="proyectos/proyecto3.html">Proyecto 3</a></h3>
-                </div>
-                <div class="grid-item">
-                    <img src="images/imagen_proyecto4.jpg" alt="Proyecto 4">
-                    <h3><a href="proyectos/proyecto4.html">Proyecto 4</a></h3>
-                </div>
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="proyectos">
+        <h2>Mis Proyectos</h2>
+        <div class="proyectos-grid">
+            <!-- Proyecto 1 -->
+            <div class="proyecto-item">
+                <img src="imagenes/imagen_proyecto1.jpg" alt="Imagen Proyecto 1">
+                <h3>Modelo de Pronóstico de Cancelación de Clientes</h3>
+                <p>Predicción de Pérdida de Clientes para Empresa de Telecomunicaciones Predicción de Churn: Modelo de
+                    aprendizaje automático para predecir la pérdida de clientes utilizando datos históricos,
+                    identificando factores clave que influyen en la cancelación de servicios y mejorando las estrategias
+                    de retención (Python, Pandas, Scikit-learn). Ingeniería de Características: Apliqué técnicas de
+                    ingeniería de características para extraer información valiosa de los datos demográficos, uso de
+                    servicios y detalles de contratos (NumPy, Pandas). Entrenamiento del Modelo: Entrené y evalué varios
+                    modelos, incluyendo random forest y XGBoost, logrando el mejor rendimiento con XGBoost para la
+                    predicción precisa de churn. Impacto en el Negocio: Permití a la empresa implementar estrategias de
+                    retención específicas, reduciendo la pérdida de clientes y minimizando la pérdida de ingresos.</p>
+                <a href="proyectos/proyecto1.html" class="btn-ver-mas">Ver más</a>
             </div>
-        </section>
+            <!-- Proyecto 2 -->
+            <div class="proyecto-item">
+                <img src="imagenes/imagen_proyecto2.jpg" alt="Imagen Proyecto 2">
+                <h3>Predicción de Valor de Coches Usados</h3>
+                <p>Descripción breve de tu proyecto.</p>
+                <a href="proyectos/proyecto2.html" class="btn-ver-mas">Ver más</a>
+            </div>
+            <!-- Agrega más proyectos según sea necesario -->
+        </div>
+    </section>
 
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme a través de <a href="mailto:melissa9608@gmail.com">mailto:melissa9608@gmail.com</a>.
+        </p>
+        <p>Explora mis proyectos en GitHub <a href="https://github.com/melissa9608">GitHub Projects</a>.</p>
+        <p>Me puedes encontrar en LinkedIn <a
+                href="https://www.linkedin.com/in/melissalondono-datascientist/">LinkedIn</a>.</p>
+    </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme a través de <a href="mailto:melissa9608@gmail.com">mailto:melissa9608@gmail.com</a>.
-            </p>
-            <p>Explora mis proyectos en GitHub <a href="https://github.com/melissa9608">GitHub Projects</a>.</p>
-            <p>Me puedes encontrar en LinkedIn <a
-                    href="https://www.linkedin.com/in/melissalondono-datascientist/">LinkedIn</a>.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Melissa Londono. Todos los derechos reservados.</p>
-    </footer>
 </body>
 
 </html>
