@@ -147,25 +147,6 @@ body {
     text-decoration: underline;
 }
 
-/* Sección Proyecto 1 */
-.proyecto1 {
-    padding: 50px 20px;
-    max-width: 800px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.proyecto1 h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.proyecto1 p {
-    line-height: 1.6;
-}
-
 /* Sección Contacto */
 .contacto {
     padding: 50px 20px;
@@ -179,4 +160,95 @@ body {
 .contacto h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
+}
+
+/* Sección Proyecto 1 */
+.proyecto1 {
+    padding: 50px 20px;
+    max-width: 800px;
+    /* Limitar el ancho máximo */
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+    /* Margen alrededor de la sección */
+    text-align: left;
+    /* Alinear el texto a la izquierda para mejor legibilidad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Añadir sombra para un efecto de elevación */
+}
+
+.proyecto1 h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    /* Espacio debajo del título */
+    border-bottom: 2px solid #007bff;
+    /* Línea debajo del título para resaltarlo */
+    padding-bottom: 10px;
+    /* Espacio interno en la parte inferior del título */
+}
+
+.proyecto1 p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    /* Espacio debajo de los párrafos */
+}
+
+/* Sección para Descripción */
+.proyecto1 .descripcion {
+    margin-top: 20px;
+    /* Espacio en la parte superior */
+}
+
+.proyecto1 .descripcion h3 {
+    font-size: 1.5em;
+    /* Tamaño de fuente más pequeño para subtítulos */
+    margin-bottom: 10px;
+}
+
+/* Sección para Metodología */
+.proyecto1 .metodologia {
+    margin-top: 20px;
+    padding: 15px;
+    /* Padding alrededor de la sección */
+    background-color: #f9f9f9;
+    /* Color de fondo diferente para destacar la sección */
+    border-radius: 8px;
+    /* Bordes redondeados */
+}
+
+/* Sección para Conclusiones */
+.proyecto1 .conclusiones {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Sección para Enlaces */
+.proyecto1 .enlaces {
+    margin-top: 20px;
+    text-align: center;
+    /* Centrar enlaces */
+}
+
+.proyecto1 .enlaces a {
+    display: inline-block;
+    /* Para que se comporten como botones */
+    margin: 5px;
+    /* Espacio entre enlaces */
+    padding: 10px 15px;
+    /* Padding interno para apariencia de botón */
+    background-color: #007bff;
+    /* Color de fondo de los botones */
+    color: #fff;
+    /* Color del texto */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    text-decoration: none;
+    /* Sin subrayado */
+}
+
+.proyecto1 .enlaces a:hover {
+    background-color: #0056b3;
+    /* Color más oscuro al pasar el ratón */
 }
