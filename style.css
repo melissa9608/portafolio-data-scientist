@@ -1,163 +1,211 @@
-/* Reset básico */
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Configuración general del cuerpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    /* Color de fondo claro */
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Barra de Navegación */
-.project-header {
-    width: 100%;
-    background-color: #007bff;
-    /* Color de fondo de la barra */
-    padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    /* Fija la barra de navegación */
-    top: 0;
-    z-index: 1000;
-}
-
-.project-header h1 {
-    color: #fff;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-nav {
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1em;
-}
-
-/* Espaciado para evitar que el contenido quede debajo de la barra */
-.container {
-    padding: 100px 20px;
-    /* Espacio superior ajustado */
-    max-width: 1000px;
-}
-
-/* Estilo de la sección del portafolio */
-.proyectos-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    /* Espaciado entre proyectos */
-    width: 100%;
-}
-
-/* Estilo de cada tarjeta de proyecto */
-.proyecto-item {
-    background-color: #ffffff;
-    border-radius: 10px;
-    /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: left;
-    padding: 20px;
-    transition: transform 0.3s;
-}
-
-/* Imagen en la tarjeta del proyecto */
-.proyecto-item img {
-    width: 100%;
-    max-height: 150px;
-    /* Altura máxima para un tamaño uniforme */
-    object-fit: cover;
-    border-radius: 8px;
-    /* Bordes redondeados para la imagen */
-}
-
-/* Texto dentro de la tarjeta */
-.proyecto-item h2 {
-    font-size: 1.2em;
-    color: #007bff;
-    margin: 10px 0;
-}
-
-.proyecto-item p {
-    font-size: 0.95em;
-    color: #666;
     line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
-/* Botón "Leer Más" */
-.proyecto-item a {
-    color: #007bff;
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar-logo {
+    color: #fff;
     text-decoration: none;
+    font-size: 24px;
     font-weight: bold;
-    margin-top: 10px;
-    display: inline-block;
 }
 
-/* Hover sobre cada tarjeta de proyecto */
-.proyecto-item:hover {
-    transform: scale(1.02);
-    /* Efecto de zoom */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-/* Estilo para el banner principal */
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-menu a:hover {
+    color: #4caf50;
+}
+
+/* Sección Inicio */
 .inicio {
+    position: relative;
     text-align: center;
-    padding: 50px 20px;
-    max-width: 800px;
-    border-radius: 10px;
-    /* Bordes redondeados para el banner */
-    background-color: #ffffff;
-    /* Fondo blanco para el banner */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
+    color: #fff;
     margin-top: 20px;
 }
 
-/* Sección Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #007bff;
-    color: white;
+.inicio .banner {
     width: 100%;
-    position: relative;
-    bottom: 0;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+.inicio .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-bottom: 15px;
+}
+
+.inicio h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.inicio p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.buttons .btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.buttons .btn:hover {
+    background-color: #45a049;
 }
 
 /* Sección Acerca de */
 .acerca {
-    background-color: #ffffff;
-    padding: 30px 20px;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
     margin-top: 20px;
-    text-align: center;
+    border-radius: 10px;
 }
 
 .acerca h2 {
-    color: #007bff;
-    margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
 .acerca p {
-    color: #333;
-    line-height: 1.6;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Sección Portafolio */
+.proyectos {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.proyectos h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.proyecto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.proyecto-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.proyecto-item h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.proyecto-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.btn-ver-mas {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-ver-mas:hover {
+    background-color: #45a049;
+}
+
+/* Sección Contacto */
+.contacto {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.contacto p {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 14px;
 }
 
 
