@@ -91,7 +91,7 @@ body {
 
 /* Sección Proyectos */
 /* Sección de detalles de proyecto */
-.proyecto-detalle {
+.proyectos-detalle {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
@@ -100,7 +100,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.proyecto-detalle h1 {
+.proyectos-detalle h1 {
     font-size: 2em;
     color: #333;
     margin-bottom: 20px;
@@ -226,13 +226,13 @@ footer {
 }
 
 /* Estilo para los proyectos en la sección principal */
-.proyecto {
+.proyectos {
     position: relative;
     /* Posicionar relativamente para el texto superpuesto */
     margin-bottom: 20px;
 }
 
-.proyecto img {
+.proyectos img {
     width: 100%;
     /* Hacer las imágenes más pequeñas */
     max-width: 300px;
@@ -241,7 +241,7 @@ footer {
     border-radius: 8px;
 }
 
-.proyecto h3 {
+.proyectos h3 {
     position: absolute;
     /* Posicionar el texto sobre la imagen */
     bottom: 10px;
@@ -260,7 +260,7 @@ footer {
     /* Asegurar que el texto esté por encima de la imagen */
 }
 
-.proyecto a {
+.proyectos a {
     display: block;
     /* Hacer que el área de clic ocupe toda la imagen */
     width: 100%;
