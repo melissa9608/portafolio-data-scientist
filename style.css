@@ -1,25 +1,30 @@
-/* Reset básico */
-* {
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
 }
 
 header {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px;
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    background: #35424a;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -28,40 +33,39 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
 }
 
-.intro {
-    text-align: center;
+section {
     padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.projects {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
+.proyecto {
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f9f9f9;
 }
 
-.project {
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    width: 30%;
-    margin: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+.proyecto img {
+    width: 100%;
+    height: auto;
 }
 
-.project:hover {
-    transform: scale(1.05);
+h2 {
+    color: #35424a;
 }
 
 footer {
-    background-color: #007BFF;
-    color: white;
     text-align: center;
     padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
 }
