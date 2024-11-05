@@ -9,15 +9,21 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    padding-top: 60px;
 }
 
 /* Barra de navegación */
 .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
     padding: 10px 20px;
+    z-index: 1000;
+    /* Asegura que la barra esté siempre al frente */
 }
 
 .navbar-logo {
@@ -59,7 +65,7 @@ body {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 0px;
     opacity: 0.9;
 }
 
@@ -125,7 +131,7 @@ body {
     text-align: center;
 }
 
-/* Sección Portafolio */
+/* Sección proyectos */
 .proyectos {
     padding: 20px;
     background-color: #fff;
