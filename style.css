@@ -52,6 +52,74 @@ nav a {
     /* Ancho máximo para centrar el contenido */
 }
 
+
+
+/* Sección Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    /* Color del fondo del footer */
+    color: white;
+    /* Color del texto en el footer */
+    width: 100%;
+    /* Ancho completo */
+    position: relative;
+    /* Posicionamiento para el footer */
+    bottom: 0;
+    /* Alinear al fondo */
+}
+
+/* Sección Inicio */
+.inicio {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+}
+
+/* Sección Acerca de */
+.acerca {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Sección Proyectos */
+.proyectos {
+    padding: 50px 20px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.proyectos h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.proyectos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Aumentar el gap entre los proyectos */
+}
+
+.proyecto-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+    margin: 10px 0;
+    /* Agregar margen superior e inferior para más separación */
+}
+
+
+
 /* Sección Proyecto 1 */
 .project-details {
     padding: 30px;
@@ -127,63 +195,4 @@ nav a {
 .project-details .enlaces a:hover {
     background-color: #0056b3;
     /* Color más oscuro al pasar el ratón */
-}
-
-/* Sección Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #007bff;
-    /* Color del fondo del footer */
-    color: white;
-    /* Color del texto en el footer */
-    width: 100%;
-    /* Ancho completo */
-    position: relative;
-    /* Posicionamiento para el footer */
-    bottom: 0;
-    /* Alinear al fondo */
-}
-
-/* Sección Inicio */
-.inicio {
-    text-align: center;
-    padding: 50px 20px;
-    max-width: 800px;
-}
-
-/* Sección Acerca de */
-.acerca {
-    background-color: #ffffff;
-    padding: 50px 20px;
-    max-width: 800px;
-    border-radius: 10px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-/* Sección Proyectos */
-.proyectos {
-    padding: 50px 20px;
-    max-width: 800px;
-    text-align: center;
-}
-
-.proyectos-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    /* Espacio entre los proyectos */
-}
-
-.proyecto-item {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s;
-    margin: 10px 0;
-    /* Espacio adicional entre proyectos */
 }
