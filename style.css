@@ -264,15 +264,43 @@ footer {
 
 
 /* Sección Proyectos en cada landing page */
+
+/* Contenedor principal para centrar y limitar el ancho de la página */
+.main-container {
+    max-width: 1200px;
+    /* Ajusta el ancho máximo del contenido */
+    margin: 0 auto;
+    /* Centra el contenido */
+    padding: 20px;
+    /* Espacio alrededor del contenido */
+}
+
+/* Sección Proyectos */
 .project-details {
     padding: 30px;
-    /* Padding en la sección del proyecto */
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    /* Margen superior */
+    max-width: 800px;
+    /* Ancho máximo para cada sección de proyecto */
+    margin: 0 auto;
 }
+
+/* Tarjetas de contenido interno */
+.content-box {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    /* Ancho máximo de cada tarjeta interna */
+    margin: 0 auto;
+}
+
+/*edicion*/
+
 
 .project-image {
     width: 100%;
@@ -280,19 +308,6 @@ footer {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px;
-}
-
-.content-box {
-    margin-bottom: 30px;
-    /* Espacio entre las secciones del proyecto */
-    padding: 20px;
-    /* Padding interno */
-    background-color: #f9f9f9;
-    /* Color de fondo ligero */
-    border-radius: 8px;
-    /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil */
 }
 
 .section-title {
