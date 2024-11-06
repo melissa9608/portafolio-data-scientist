@@ -266,7 +266,7 @@ footer {
 /* Sección Proyectos en cada landing page */
 
 /* Contenedor principal */
-.container {
+.main-container {
     max-width: 800px;
     /* Limita el ancho máximo al mismo valor que la sección contacto */
     margin: 0 auto;
