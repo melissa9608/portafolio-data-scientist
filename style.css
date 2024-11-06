@@ -75,7 +75,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-
     padding: 20px;
     border-radius: 10px;
 }
@@ -92,14 +91,14 @@ body {
 .inicio h1 {
     font-size: 36px;
     margin-bottom: 5px;
-    color: #f8ecec;
+    color: #ffffff;
     margin-top: 20px;
 }
 
 .inicio p {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #f8ecec;
+    color: #dcdcdc;
     margin-top: 10px;
 }
 
@@ -147,38 +146,34 @@ body {
 
 .proyectos h2 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 32px;
+    font-size: 2rem;
+    /* Ajusta el tamaño del texto */
     color: #333;
+    /* Color del texto */
+    margin-bottom: 20px;
+    /* Espacio debajo del título */
 }
 
+/* Grilla de Proyectos */
 .proyectos-list {
     display: flex;
     justify-content: center;
-    /* Centrado de las tarjetas en el contenedor */
-    gap: 20px;
     flex-wrap: wrap;
-    /* Asegura que las tarjetas se ajusten si hay más de una fila */
+    gap: 20px;
+    /* Espacio entre las tarjetas */
+    margin-top: 20px;
 }
 
 .proyecto-item {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 280px;
-    /* Ancho fijo para las tarjetas */
-    max-width: 100%;
-    /* Para que se adapten al tamaño de la pantalla */
-    margin: 10px;
-    /* Espaciado entre las tarjetas */
-}
-
-.proyecto-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+    /* Establece el tamaño máximo de las tarjetas */
+    box-sizing: border-box;
 }
 
 .proyecto-item img {
@@ -189,12 +184,14 @@ body {
 
 .proyecto-item h3 {
     margin-top: 15px;
-    font-size: 24px;
+    font-size: 18px;
+    /* Ajusta el tamaño de los títulos */
     color: #333;
 }
 
 .proyecto-item p {
-    font-size: 16px;
+    font-size: 14px;
+    /* Ajusta el tamaño del texto */
     margin: 10px 0;
     color: #555;
 }
