@@ -264,9 +264,8 @@ footer {
 
 /*Proyectos*/
 
-.main-container {
+.containerpr {
     max-width: 800px;
-    /* Limita el ancho máximo al mismo valor que la sección contacto */
     margin: 0 auto;
     /* Centra la sección */
     padding: 20px;
