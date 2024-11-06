@@ -267,8 +267,8 @@ footer {
 
 /* Contenedor principal para centrar y limitar el ancho de la página */
 
-.main-container {
-    max-width: 1000px;
+.container {
+    max-width: 800px;
     /* Ajusta el ancho máximo del contenido */
     margin: 0 auto;
     /* Centra el contenido */
@@ -306,7 +306,7 @@ footer {
 .project-image {
     width: 100%;
     max-height: 300px;
-    object-fit: cover;
+    max-width: 800 px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
