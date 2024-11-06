@@ -262,7 +262,6 @@ footer {
     font-size: 14px;
 }
 
-
 .project-details {
     padding: 30px;
     /* Padding en la sección del proyecto */
@@ -272,9 +271,6 @@ footer {
     margin-top: 20px;
     /* Margen superior */
 }
-
-
-/*Proyectos individuales */
 
 .project-image {
     width: 100%;
