@@ -151,23 +151,22 @@ body {
 .proyectos h2 {
     text-align: center;
     font-size: 2rem;
+    /* Ajusta el tamaño del texto */
     color: #333;
+    /* Color del texto */
     margin-bottom: 20px;
+    /* Espacio debajo del título */
 }
 
 /* Grilla de Proyectos */
+
 .proyectos-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* Grilla de dos columnas */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     /* Espacio entre las tarjetas */
-    margin: 0 auto;
-    /* Centra la grilla */
-    padding: 10px;
-    /* Margen de separación respecto a los bordes */
-    max-width: 1200px;
-    /* Limita el ancho de la grilla */
+    margin-top: 20px;
 }
 
 .proyecto-item {
@@ -176,6 +175,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 100%;
+    max-width: 800px;
+    /* Establece el tamaño máximo de las tarjetas */
     box-sizing: border-box;
 }
 
@@ -188,11 +190,13 @@ body {
 .proyecto-item h3 {
     margin-top: 15px;
     font-size: 18px;
+    /* Ajusta el tamaño de los títulos */
     color: #333;
 }
 
 .proyecto-item p {
     font-size: 14px;
+    /* Ajusta el tamaño del texto */
     margin: 10px 0;
     color: #555;
 }
@@ -211,9 +215,6 @@ body {
 .proyecto-item .btn-ver-mas:hover {
     background-color: #45a049;
 }
-
-
-
 
 /* Sección Contacto */
 
