@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #275190;
     padding: 10px 20px;
     z-index: 1000;
 }
@@ -218,7 +218,7 @@ body {
 
 
 /* Sección Contacto */
-/* Sección Contacto */
+
 .contacto {
     padding: 40px 20px;
     background-color: #fff;
