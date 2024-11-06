@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
-    padding-top: 60px;
+
 }
 
 /* Barra de navegación */
@@ -144,7 +144,8 @@ body {
 .proyectos h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 28px;
+    color: #333;
 }
 
 .proyectos-grid {
@@ -156,30 +157,37 @@ body {
 .proyecto-item {
     background-color: #f9f9f9;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
+    /* Añadir más espacio */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .proyecto-item:hover {
     transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    /* Más sombra al pasar el mouse */
 }
 
 .proyecto-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    object-fit: cover;
+    /* Asegura que las imágenes no pierdan proporción */
 }
 
 .proyecto-item h3 {
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 15px 0;
+    font-size: 20px;
+    color: #333;
 }
 
 .proyecto-item p {
     font-size: 14px;
     color: #666;
+    margin-bottom: 15px;
 }
 
 .btn-ver-mas {
@@ -187,14 +195,24 @@ body {
     margin-top: 10px;
     background-color: #4caf50;
     color: white;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .btn-ver-mas:hover {
     background-color: #45a049;
+}
+
+/* Opcional: Ajuste para pantallas más grandes */
+@media (min-width: 1200px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas en pantallas grandes */
+    }
 }
 
 /* Sección Contacto */
