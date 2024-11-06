@@ -139,36 +139,30 @@ body {
     text-align: center;
 }
 
-/* Sección proyectos */
-/* Sección Proyectos */
-.proyectos {
-    padding: 20px;
-    background-color: #fff;
-}
-
-.proyectos h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 32px;
-    color: #333;
-}
-
-/* Grilla de Proyectos */
-.proyectos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    /* Ajusta los elementos en columnas de mínimo 280px de ancho */
+/* Ajuste para los proyectos en una sola columna */
+.proyectos-list {
+    display: flex;
+    flex-direction: column;
+    /* Disposición en columna */
     gap: 20px;
+    /* Espacio entre cada proyecto */
     margin-top: 20px;
 }
 
-/* Estilo de cada proyecto */
+/* Estilo de cada "cajita" de proyecto */
 .proyecto-item {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para cada cajita */
+.proyecto-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .proyecto-item img {
@@ -202,119 +196,112 @@ body {
 
 .proyecto-item .btn-ver-mas:hover {
     background-color: #45a049;
+}
 
 
-    /* Opcional: Ajuste para pantallas más grandes */
-    @media (min-width: 1200px) {
-        .proyectos-grid {
-            grid-template-columns: repeat(3, 1fr);
-            /* 3 columnas en pantallas grandes */
-        }
-    }
+/* Sección Contacto */
+.contacto {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
 
-    /* Sección Contacto */
-    .contacto {
-        padding: 20px;
-        background-color: #fff;
-        margin-top: 20px;
-        border-radius: 10px;
-    }
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
 
-    .contacto h2 {
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 24px;
-    }
+.contacto p {
+    font-size: 16px;
+    text-align: center;
+}
 
-    .contacto p {
-        font-size: 16px;
-        text-align: center;
-    }
-
-    /* Footer */
-    footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #333;
-        color: #fff;
-        margin-top: 20px;
-        font-size: 14px;
-    }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 14px;
+}
 
 
-    /* Sección Proyectos en cada landing page */
-    .project-details {
-        padding: 30px;
-        /* Padding en la sección del proyecto */
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-        /* Margen superior */
-    }
+/* Sección Proyectos en cada landing page */
+.project-details {
+    padding: 30px;
+    /* Padding en la sección del proyecto */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    /* Margen superior */
+}
 
-    .project-image {
-        width: 100%;
-        max-height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
+.project-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
-    .content-box {
-        margin-bottom: 30px;
-        /* Espacio entre las secciones del proyecto */
-        padding: 20px;
-        /* Padding interno */
-        background-color: #f9f9f9;
-        /* Color de fondo ligero */
-        border-radius: 8px;
-        /* Bordes redondeados */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        /* Sombra sutil */
-    }
+.content-box {
+    margin-bottom: 30px;
+    /* Espacio entre las secciones del proyecto */
+    padding: 20px;
+    /* Padding interno */
+    background-color: #f9f9f9;
+    /* Color de fondo ligero */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
 
-    .section-title {
-        font-size: 1.5em;
-        /* Tamaño de fuente del título de sección */
-        margin-bottom: 15px;
-        /* Espacio debajo del título de sección */
-        border-bottom: 2px solid #007bff;
-        /* Línea debajo del título */
-        padding-bottom: 10px;
-        /* Espacio interno en la parte inferior del título */
-    }
+.section-title {
+    font-size: 1.5em;
+    /* Tamaño de fuente del título de sección */
+    margin-bottom: 15px;
+    /* Espacio debajo del título de sección */
+    border-bottom: 2px solid #007bff;
+    /* Línea debajo del título */
+    padding-bottom: 10px;
+    /* Espacio interno en la parte inferior del título */
+}
 
-    .project-details p {
-        line-height: 1.6;
-        /* Mejora la legibilidad del texto */
-        margin-bottom: 15px;
-        /* Espacio debajo de los párrafos */
-    }
+.project-details p {
+    line-height: 1.6;
+    /* Mejora la legibilidad del texto */
+    margin-bottom: 15px;
+    /* Espacio debajo de los párrafos */
+}
 
-    /* Sección Enlaces */
-    .project-details .enlaces {
-        text-align: center;
-        /* Centrar los enlaces */
-    }
+/* Sección Enlaces */
+.project-details .enlaces {
+    text-align: center;
+    /* Centrar los enlaces */
+}
 
-    .project-details .enlaces a {
-        display: inline-block;
-        margin: 5px;
-        /* Espacio entre enlaces */
-        padding: 10px 15px;
-        /* Padding interno para apariencia de botón */
-        background-color: #007bff;
-        /* Color de fondo de los enlaces */
-        color: #fff;
-        /* Color del texto */
-        border-radius: 5px;
-        /* Bordes redondeados */
-        text-decoration: none;
-        /* Sin subrayado */
-    }
+.project-details .enlaces a {
+    display: inline-block;
+    margin: 5px;
+    /* Espacio entre enlaces */
+    padding: 10px 15px;
+    /* Padding interno para apariencia de botón */
+    background-color: #007bff;
+    /* Color de fondo de los enlaces */
+    color: #fff;
+    /* Color del texto */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    text-decoration: none;
+    /* Sin subrayado */
+}
 
-    .project-details .enlaces a:hover {
-        background-color: #0056b3;
-        /* Color más oscuro al pasar el ratón */
-    }
+.project-details .enlaces a:hover {
+    background-color: #0056b3;
+    /* Color más oscuro al pasar el ratón */
+}
