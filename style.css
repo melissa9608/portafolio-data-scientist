@@ -266,8 +266,9 @@ footer {
 /* Sección Proyectos en cada landing page */
 
 /* Contenedor principal para centrar y limitar el ancho de la página */
+
 .main-container {
-    max-width: 1200px;
+    max-width: 1000px;
     /* Ajusta el ancho máximo del contenido */
     margin: 0 auto;
     /* Centra el contenido */
