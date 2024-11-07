@@ -126,7 +126,8 @@
                     
                     # Crear el modelo
                     def create_model(input_shape):
-                        base_model = ResNet50(weights='imagenet', include_top=False, input_shape=input_shape)
+                        base_model = ResNet50(weights='imagenet', include_top=False,
+                         input_shape=input_shape)
                         model = Sequential([
                             base_model,
                             GlobalAveragePooling2D(),
@@ -134,7 +135,8 @@
                             Dense(128, activation='relu'),
                             Dense(1)  # Salida de regresión para la edad
                         ])
-                        model.compile(optimizer=Adam(learning_rate=0.0001), loss='mse', metrics=['mae'])
+                        model.compile(optimizer=Adam(learning_rate=0.0001), loss='mse', 
+                        metrics=['mae'])
                         return model
                       </code></pre>
             </section>

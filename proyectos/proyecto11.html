@@ -155,7 +155,8 @@ def evaluate_model_lgbm(model, train_features, train_target, test_features, test
     }
 
     for metric, score in metrics.items():
-        print(f'{metric} - Train: {accuracy_score(train_target, model.predict(train_features)):.2f}, Test: {score:.2f}')
+        print(f'{metric} - Train: {accuracy_score(train_target, model.predict(train_features)):.2f}, 
+        Test: {score:.2f}')
     </pre>
 
             </section>
@@ -165,7 +166,8 @@ def evaluate_model_lgbm(model, train_features, train_target, test_features, test
                 </h2>
                 <pre>
                     # Cargar el tokenizer y el modelo preentrenado
-                    tokenizer = transformers.BertTokenizer.from_pretrained('bert-base-uncased')
+                    tokenizer = 
+                    transformers.BertTokenizer.from_pretrained('bert-base-uncased')
                     config = transformers.BertConfig.from_pretrained('bert-base-uncased')
                     model_9 = transformers.BertModel.from_pretrained('bert-base-uncased')
                     
@@ -174,10 +176,12 @@ def evaluate_model_lgbm(model, train_features, train_target, test_features, test
                         def __init__(self, bert_model, num_labels=2):
                             super(BertClassifier, self).__init__()
                             self.bert = bert_model
-                            self.classifier = nn.Linear(bert_model.config.hidden_size, num_labels)
+                            self.classifier = 
+                            nn.Linear(bert_model.config.hidden_size, num_labels)
                     
                         def forward(self, input_ids, attention_mask):
-                            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
+                            outputs = self.bert(input_ids=input_ids, 
+                            attention_mask=attention_mask)
                             cls_output = outputs.last_hidden_state[:, 0, :]
                             logits = self.classifier(cls_output)
                             return logits
