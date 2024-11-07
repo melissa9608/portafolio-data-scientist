@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Pedidos de Taxis en Tiempo Real para Sweet Lift Taxi</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Enlace al archivo CSS -->
+    <link rel="icon" href="favicoin.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <header class="project-header">
+        <h1>Predicción de Pedidos de Taxis en Tiempo Real para Sweet Lift Taxi</h1>
+
+        <nav class="navbar">
+            <a href="../index.html" class="navbar-logo">INICIO</a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#acerca">¿QUIEN SOY?</a></li>
+                <li><a href="../index.html#proyectos">PROYECTOS</a></li>
+                <li><a href="../index.html#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="containerpr">
+
+
+        <div class="project-details">
+            <img src="proyecto10.jpeg" alt="Imagen Proyecto 10" class="project-image">
+            <section class="content-box">
+                <h2 class="section-title">Predicción de Pedidos de Taxis en Tiempo Real para Sweet Lift Taxi
+                </h2>
+                <p>Este proyecto tiene como objetivo desarrollar un modelo de aprendizaje automático para predecir la
+                    cantidad de pedidos de taxis en el aeropuerto para la próxima hora. Utilizando datos históricos, se
+                    busca implementar una solución eficaz para predecir la demanda de taxis, lo que ayudará a optimizar
+                    los recursos y mejorar el servicio para los clientes.</p>
+                <p>La predicción se realiza utilizando un conjunto de técnicas de Machine Learning y análisis de series
+                    temporales, como el modelo SARIMA y otros modelos de regresión como Random Forest, Árbol de Decisión
+                    y Regresión Lineal.</p>
+
+            </section>
+
+
+            <section class="content-box">
+                <h2 class="section-title">Herramientas y Tecnologías
+                </h2>
+                <ul>
+                    <li><strong>Pandas:</strong> Manipulación y limpieza de datos.</li>
+                    <li><strong>Scikit-learn:</strong> Modelos de Machine Learning (Regresión Lineal, Árbol de Decisión,
+                        Random Forest).</li>
+                    <li><strong>SARIMAX:</strong> Modelo SARIMA para series temporales.</li>
+                    <li><strong>Statsmodels:</strong> Análisis de series temporales y descomposición estacional.</li>
+                    <li><strong>Matplotlib:</strong> Visualización de resultados.</li>
+                </ul>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Metodología</h2>
+                <p>La metodología seguida incluye los siguientes pasos:</p>
+                <ol>
+                    <li>Preprocesamiento de datos: Limpieza y remuestreo de datos a intervalos de una hora.</li>
+                    <li>Análisis exploratorio de datos: Estudio de las series temporales mediante la descomposición
+                        estacional.</li>
+                    <li>Generación de características adicionales: Creación de nuevas variables basadas en las
+                        características temporales.</li>
+                    <li>Entrenamiento y evaluación de modelos: Implementación de diferentes algoritmos de Machine
+                        Learning, incluyendo regresión lineal, árboles de decisión, random forest y el modelo SARIMA.
+                    </li>
+                    <li>Visualización de resultados: Comparación y análisis visual de las predicciones realizadas por
+                        los modelos.</li>
+                </ol>
+
+
+
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Resultados
+                </h2>
+                <p>Los modelos fueron evaluados utilizando la métrica de Error Cuadrático Medio de la Raíz (RECM), con
+                    el siguiente desempeño:</p>
+                <ul>
+                    <li><strong>Regresión Lineal:</strong> RECM = 53.41</li>
+                    <li><strong>Árbol de Decisión:</strong> Mejores Hiperparámetros: max_depth = 3, RECM = 52.60</li>
+                    <li><strong>Random Forest:</strong> Mejores Hiperparámetros: n_estimators = 40, RECM = 46.78</li>
+                    <li><strong>SARIMA:</strong> RECM = 43.64 (Mejor desempeño)</li>
+                </ul>
+                <p>El modelo SARIMA, que maneja patrones estacionales y no estacionarios, se destacó como el más preciso
+                    y alcanzó el objetivo de un RECM inferior a 48.</p>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Ganancias Potenciales
+                </h2>
+
+                <ul>
+                    <li>Región 0: $33,208,260.43 USD</li>
+                    <li>Región 1: $24,150,866.96 USD</li>
+                    <li>Región 2: $27,103,499.63 USD</li>
+                </ul>
+            </section>
+
+
+
+            <section class="content-box">
+                <h2 class="section-title">Conclusiones</h2>
+                <p>El objetivo del proyecto fue construir un modelo que predijera la cantidad de pedidos de taxis en la
+                    próxima hora. Se probaron diferentes enfoques, incluyendo varios modelos de aprendizaje automático y
+                    un modelo SARIMA para series temporales.</p>
+                <p>Los modelos de Machine Learning, como la Regresión Lineal, el Árbol de Decisión y el Random Forest,
+                    no alcanzaron el objetivo de RECM < 48. Sin embargo, el modelo SARIMA fue el que mejor desempeño
+                        tuvo, alcanzando un RECM de 43.64, cumpliendo con los requisitos de precisión establecidos.</p>
+                        <p>El modelo SARIMA es el más adecuado para este tipo de problemas, ya que es capaz de manejar
+                            patrones estacionales y no estacionarios, lo que es común en los datos de pedidos de taxis,
+                            que muestran fluctuaciones según la hora del día y el día de la semana.</p>
+
+            </section>
+
+
+
+            <section class="content-box">
+                <h2 class="section-title">Enlaces</h2>
+                <ul>
+                    <li><a href="https://github.com/melissa9608/series_temporales" target="_blank">Repositorio
+                            en GitHub</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme en <a href="mailto:melissa9608@gmail.com">melissa9608@gmail.com</a>.</p>
+        <p>Explora mis proyectos en GitHub <a href="https://github.com/melissa9608">GitHub Projects</a>.</p>
+        <p>Me puedes encontrar en LinkedIn <a
+                href="https://www.linkedin.com/in/melissalondono-datascientist/">LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Melissa Londono. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

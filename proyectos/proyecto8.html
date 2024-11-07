@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización de Modelos de Seguros para Sure Tomorrow</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Enlace al archivo CSS -->
+    <link rel="icon" href="favicoin.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <header class="project-header">
+        <h1>Optimización de Modelos de Seguros para Sure Tomorrow</h1>
+
+        <nav class="navbar">
+            <a href="../index.html" class="navbar-logo">INICIO</a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#acerca">¿QUIEN SOY?</a></li>
+                <li><a href="../index.html#proyectos">PROYECTOS</a></li>
+                <li><a href="../index.html#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="containerpr">
+
+
+        <div class="project-details">
+            <img src="proyecto8.jpg" alt="Imagen Proyecto 8" class="project-image">
+            <section class="content-box">
+                <h2 class="section-title">Optimización de Modelos de Seguros para Sure Tomorrow
+                </h2>
+                <p>Este proyecto aborda cuatro objetivos clave para la compañía de seguros Sure Tomorrow, explorando
+                    soluciones de machine learning que mejoren la eficiencia en la gestión de clientes y la seguridad de
+                    los datos. Los objetivos incluyen la segmentación de clientes para marketing, la predicción de
+                    prestaciones de seguros, el análisis de frecuencia de reclamaciones y el enmascaramiento de datos
+                    para proteger la privacidad sin afectar la calidad de los modelos.
+                </p>
+            </section>
+
+
+            <section class="content-box">
+                <h2 class="section-title">Hipótesis
+                </h2>
+                <ul>
+                    <li><strong>Similitud de Clientes:</strong> Es posible agrupar clientes similares mediante técnicas
+                        de k-vecinos, permitiendo segmentar mejor las campañas de marketing.</li>
+                    <li><strong>Prestaciones de Seguros:</strong> Un modelo predictivo bien entrenado será más efectivo
+                        que un modelo aleatorio (dummy) para identificar la probabilidad de que un cliente reciba una
+                        prestación.</li>
+                    <li><strong>Frecuencia de Prestaciones:</strong> Un modelo de regresión lineal puede estimar de
+                        manera precisa la cantidad de prestaciones que un cliente podría requerir.</li>
+                    <li><strong>Enmascaramiento de Datos:</strong> Es factible implementar un algoritmo de
+                        enmascaramiento que mantenga la privacidad de los datos sin reducir la calidad de los modelos
+                        predictivos.</li>
+                </ul>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Metodología</h2>
+                <ul>
+                    <li><strong>Análisis Exploratorio de Datos (EDA):</strong> Se realizó una exploración inicial de
+                        datos para identificar patrones y relaciones mediante gráficos de pares, aunque la falta de
+                        clústeres evidentes impulsó el uso de aprendizaje automático.</li>
+                    <li><strong>Clientes Similares (Objetivo 1):</strong> Se implementó un modelo de k-Nearest Neighbors
+                        (kNN) utilizando métricas de distancia Euclidiana y Manhattan, con y sin escalado de datos, para
+                        identificar los clientes más cercanos a uno dado.</li>
+                    <li><strong>Modelo Predictivo de Prestaciones (Objetivo 2):</strong> Se desarrolló un modelo kNN
+                        para predecir la probabilidad de prestación, comparando su rendimiento con un modelo dummy en
+                        varias configuraciones de probabilidad. Se midió el rendimiento mediante la métrica F1 para
+                        diferentes valores de k.</li>
+                    <li><strong>Regresión Lineal para Predecir el Número de Prestaciones (Objetivo 3):</strong> Se
+                        entrenó un modelo de regresión lineal para estimar la cantidad de prestaciones de seguro
+                        esperadas para nuevos clientes.</li>
+                    <li><strong>Enmascaramiento de Datos (Objetivo 4):</strong> Se creó un algoritmo de ofuscación que
+                        protege los datos personales manteniendo el rendimiento de los modelos de machine learning.</li>
+                </ul>
+
+
+
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Resultados
+                </h2>
+                <ul>
+                    <li><strong>Objetivo 1:</strong> Se observó que el escalado de datos afecta significativamente los
+                        resultados del modelo kNN, permitiendo una identificación más precisa de vecinos cercanos cuando
+                        las variables están en una escala uniforme.</li>
+                    <li><strong>Objetivo 2:</strong> El modelo kNN escalado superó al modelo dummy, alcanzando F1 Scores
+                        de hasta 0.96 para k=1 a 5. El modelo dummy resultó en F1 Scores bajos, confirmando que un
+                        modelo entrenado mejora la predicción.</li>
+                    <li><strong>Objetivo 3:</strong> La regresión lineal proporcionó estimaciones precisas del número de
+                        prestaciones esperadas, siendo una herramienta útil para la planificación financiera.</li>
+                    <li><strong>Objetivo 4:</strong> El enmascaramiento de datos demostró ser efectivo, protegiendo la
+                        información sin comprometer la precisión del modelo predictivo.</li>
+                </ul>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Conclusiones</h2>
+                <p>Las técnicas de machine learning pueden optimizar considerablemente el análisis de clientes y la
+                    predicción de prestaciones en el sector de seguros. El uso de modelos kNN y regresión lineal, junto
+                    con el enmascaramiento de datos, proporciona soluciones avanzadas en marketing, finanzas y seguridad
+                    de datos.</p>
+            </section>
+
+
+
+            <section class="content-box">
+                <h2 class="section-title">Enlaces</h2>
+                <ul>
+                    <li><a href="https://github.com/melissa9608/algebra_lineal" target="_blank">Repositorio
+                            en GitHub</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme en <a href="mailto:melissa9608@gmail.com">melissa9608@gmail.com</a>.</p>
+        <p>Explora mis proyectos en GitHub <a href="https://github.com/melissa9608">GitHub Projects</a>.</p>
+        <p>Me puedes encontrar en LinkedIn <a
+                href="https://www.linkedin.com/in/melissalondono-datascientist/">LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Melissa Londono. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

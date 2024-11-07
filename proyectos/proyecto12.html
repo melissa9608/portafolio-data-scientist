@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Verificación de Edad para Cumplimiento en Ventas de Alcohol con Visión Artificial</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Enlace al archivo CSS -->
+    <link rel="icon" href="favicoin.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <header class="project-header">
+        <h1>Modelo de Verificación de Edad para Cumplimiento en Ventas de Alcohol con Visión Artificial</h1>
+
+        <nav class="navbar">
+            <a href="../index.html" class="navbar-logo">INICIO</a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#acerca">¿QUIEN SOY?</a></li>
+                <li><a href="../index.html#proyectos">PROYECTOS</a></li>
+                <li><a href="../index.html#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="containerpr">
+
+
+        <div class="project-details">
+            <img src="proyecto12.jpg" alt="Imagen Proyecto 12" class="project-image">
+            <section class="content-box">
+                <h2 class="section-title">Modelo de Verificación de Edad para Cumplimiento en Ventas de Alcohol con
+                    Visión Artificial
+                </h2>
+                <p>
+                <p>El proyecto tiene como objetivo crear un sistema capaz de verificar la edad de una persona mediante
+                    el análisis de su rostro en imágenes. Este tipo de tecnología tiene aplicaciones clave en la
+                    verificación de la edad para la venta de productos restringidos, como el alcohol. Se diseñó un
+                    modelo utilizando una arquitectura de red neuronal profunda para abordar esta tarea de clasificación
+                    continua.</p>
+                </p>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Objetivo
+                </h2>
+                <p><strong>Objetivo:</strong> Desarrollé un modelo de aprendizaje automático para verificar la edad a
+                    través de imágenes faciales y asegurar el cumplimiento de las regulaciones de venta de alcohol,
+                    utilizando redes neuronales convolucionales (CNNs).</p>
+            </section>
+
+
+            <section class="content-box">
+                <h2 class="section-title">Metodología
+                </h2>
+                <p>Para la construcción del modelo, utilicé la arquitectura ResNet50, que es adecuada para tareas de
+                    clasificación de imágenes complejas debido a su capacidad para capturar características jerárquicas
+                    de las imágenes mediante una red de capas residual. A continuación, detallamos los pasos seguidos:
+                </p>
+
+                <ul>
+                    <li><strong>Preprocesamiento de Datos:</strong> Las imágenes fueron redimensionadas y normalizadas
+                        para facilitar su uso en la red neuronal. Además, se aplicaron técnicas de aumento de datos para
+                        mejorar la generalización del modelo y manejar los datos desbalanceados.</li>
+                    <li><strong>Modelado:</strong> El modelo se construyó sobre la base de ResNet50, añadiendo capas
+                        densas y de global average pooling para extraer características relevantes. Se utilizó el
+                        optimizador Adam y el error cuadrático medio (MSE) como función de pérdida.</li>
+                    <li><strong>Entrenamiento:</strong> El modelo fue entrenado utilizando un conjunto de datos
+                        etiquetado, evaluando el rendimiento con métricas como el error absoluto medio (MAE) y el error
+                        cuadrático medio (MSE). El modelo se entrenó durante 20 épocas con un tamaño de lote de 16.</li>
+                    <li><strong>Evaluación:</strong> Se monitorearon los resultados de cada época y se evaluó el
+                        rendimiento del modelo con datos de validación para asegurar que no se produjera sobreajuste.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Exploración de Datos</h2>
+                <p>Al analizar los datos, se observó que el conjunto de imágenes contenía una distribución bastante
+                    amplia de edades, pero con un sesgo hacia edades más jóvenes. Este desbalance fue abordado durante
+                    el preprocesamiento mediante técnicas de aumento de datos. Se usó un histograma y un diagrama de
+                    caja para explorar la distribución de las edades, lo que permitió observar la variabilidad y la
+                    existencia de algunos valores atípicos.</p>
+
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Hallazgos
+                </h2>
+                <ul>
+                    <li>La red neuronal fue capaz de aprender representaciones faciales complejas para predecir la edad
+                        con una precisión razonable.</li>
+                    <li>El modelo presentó buenos resultados al evaluar el rendimiento mediante métricas como MAE y MSE,
+                        aunque se identificó que la precisión mejoraría con un conjunto de datos más equilibrado.</li>
+                    <li>Se detectaron ciertos sesgos en la predicción de edades, especialmente con imágenes de personas
+                        de grupos etarios menos representados, lo que resalta la importancia de la diversidad en los
+                        datos de entrenamiento.</li>
+                </ul>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Código Clave
+                </h2>
+                <pre><code>
+                    from tensorflow.keras.optimizers import Adam
+                    from tensorflow.keras.layers import GlobalAveragePooling2D, Dense, Dropout
+                    from tensorflow.keras.models import Sequential
+                    from tensorflow.keras.applications.resnet import ResNet50
+                    import pandas as pd
+                    from tensorflow.keras.preprocessing.image import ImageDataGenerator
+                    
+                    # Cargar y preprocesar datos
+                    df_labels = pd.read_csv('/datasets/faces/labels.csv')
+                    datagen = ImageDataGenerator(rescale=1./255)
+                    train_gen_flow = datagen.flow_from_dataframe(
+                        dataframe=df_labels,
+                        directory='/datasets/faces/final_files/',
+                        x_col='file_name',
+                        y_col='real_age',
+                        target_size=(150, 150),
+                        batch_size=16,
+                        class_mode='raw'
+                    )
+                    
+                    # Crear el modelo
+                    def create_model(input_shape):
+                        base_model = ResNet50(weights='imagenet', include_top=False, input_shape=input_shape)
+                        model = Sequential([
+                            base_model,
+                            GlobalAveragePooling2D(),
+                            Dropout(0.5),
+                            Dense(128, activation='relu'),
+                            Dense(1)  # Salida de regresión para la edad
+                        ])
+                        model.compile(optimizer=Adam(learning_rate=0.0001), loss='mse', metrics=['mae'])
+                        return model
+                      </code></pre>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Resultados</h2>
+                <p>El modelo mostró una mejora significativa con el uso de la arquitectura ResNet50 y técnicas de
+                    aumento de datos. Tras 20 épocas de entrenamiento, el modelo logró un <strong>error absoluto medio
+                        (MAE)</strong> razonablemente bajo, pero se identificaron áreas de mejora, especialmente en el
+                    manejo de datos desbalanceados.</p>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Consideraciones Éticas</h2>
+                <p>Un aspecto importante de este proyecto es la posibilidad de sesgo en el reconocimiento facial. Los
+                    modelos de visión artificial pueden presentar sesgos si los datos de entrenamiento no son diversos o
+                    si ciertas características faciales predominan sobre otras, lo que puede llevar a resultados
+                    inexactos, especialmente en personas de grupos étnicos o edades no representadas adecuadamente en
+                    los datos. Es crucial abordar estos problemas a medida que se recopilan más datos y se ajustan los
+                    modelos.</p>
+
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Trabajo Futuro</h2>
+
+                <p>Para mejorar el modelo en el futuro, se sugiere explorar nuevas arquitecturas como Vision Transformer
+                    (ViT), que podría proporcionar mejores resultados en tareas de visión artificial. Además, una mejora
+                    crítica sería la recolección de un conjunto de datos más diverso que incluya una mayor variedad de
+                    edades, géneros y etnias, lo que reduciría los sesgos presentes en el modelo actual.</p>
+
+            </section>
+
+
+
+            <section class="content-box">
+                <h2 class="section-title">Conclusiones</h2>
+                <p>Este proyecto demuestra el potencial de las redes neuronales convolucionales para tareas de
+                    verificación de edad, una aplicación relevante en la industria del cumplimiento de normativas.
+                    Aunque los resultados fueron prometedores, se identificaron áreas de mejora relacionadas con la
+                    calidad y diversidad de los datos, lo que abre oportunidades para futuras investigaciones y
+                    optimización del modelo.</p>
+            </section>
+
+
+
+            <section class="content-box">
+                <h2 class="section-title">Enlaces</h2>
+                <ul>
+                    <li><a href="https://github.com/melissa9608/vision_artificial" target="_blank">Repositorio
+                            en GitHub</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme en <a href="mailto:melissa9608@gmail.com">melissa9608@gmail.com</a>.</p>
+        <p>Explora mis proyectos en GitHub <a href="https://github.com/melissa9608">GitHub Projects</a>.</p>
+        <p>Me puedes encontrar en LinkedIn <a
+                href="https://www.linkedin.com/in/melissalondono-datascientist/">LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Melissa Londono. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción del Valor de Autos Usados para Rusty Bargain con Machine Learning</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Enlace al archivo CSS -->
+    <link rel="icon" href="favicoin.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <header class="project-header">
+        <h1>Predicción del Valor de Autos Usados para Rusty Bargain con Machine Learning</h1>
+
+        <nav class="navbar">
+            <a href="../index.html" class="navbar-logo">INICIO</a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#acerca">¿QUIEN SOY?</a></li>
+                <li><a href="../index.html#proyectos">PROYECTOS</a></li>
+                <li><a href="../index.html#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="containerpr">
+
+
+        <div class="project-details">
+            <img src="proyecto9.jpg" alt="Imagen Proyecto 10" class="project-image">
+            <section class="content-box">
+                <h2 class="section-title">Predicción del Valor de Autos Usados para Rusty Bargain con Machine Learning
+                </h2>
+                <p>Este proyecto se centra en la predicción del valor de mercado de vehículos usados para la empresa
+                    <strong>Rusty Bargain</strong>,
+                    utilizando un conjunto de datos de coches usados con información variada como tipo de vehículo,
+                    marca, modelo, tipo de combustible y
+                    transmisión, entre otros factores. La intención es crear un modelo que permita estimar de manera
+                    precisa el valor de un vehículo
+                    basándose en sus características y así mejorar la estrategia de compra-venta de la empresa.
+                </p>
+                </p>
+            </section>
+
+
+            <section class="content-box">
+                <h2 class="section-title">hipótesis
+                </h2>
+                <p>Este proyecto se centra en la predicción del valor de mercado de vehículos usados para la empresa
+                    <strong>Rusty Bargain</strong>,
+                    utilizando un conjunto de datos de coches usados con información variada como tipo de vehículo,
+                    marca, modelo, tipo de combustible y
+                    transmisión, entre otros factores. La intención es crear un modelo que permita estimar de manera
+                    precisa el valor de un vehículo
+                    basándose en sus características y así mejorar la estrategia de compra-venta de la empresa.</p>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Herramientas y Tecnologías Utilizadas</h2>
+
+                <ul>
+                    <li><strong>Python:</strong> para todo el procesamiento y modelado de datos.</li>
+                    <li><strong>pandas:</strong> limpieza y manipulación del dataset.</li>
+                    <li><strong>scikit-learn:</strong> entrenamiento y evaluación de modelos de regresión lineal, árbol
+                        de decisión, y bosque aleatorio.</li>
+                    <li><strong>CatBoost:</strong> entrenamiento y optimización de un modelo avanzado de boosting.</li>
+                    <li><strong>StandardScaler:</strong> para escalar características numéricas.</li>
+                    <li><strong>Matplotlib & Seaborn:</strong> visualización de métricas y resultados del modelo
+                        (opcional para gráficos adicionales).</li>
+                </ul>
+
+
+
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Flujo de Trabajo
+                </h2>
+                <ol>
+                    <li><strong>Preparación de Datos:</strong> se realizó un tratamiento de valores nulos y duplicados,
+                        y se eliminaron columnas irrelevantes
+                        como <code>last_seen</code>, <code>number_of_pictures</code>, <code>postal_code</code>, y
+                        <code>date_crawled</code>.
+                        Se aplicó codificación <code>One-Hot</code> para las variables categóricas.</li>
+
+                    <li><strong>División de Datos:</strong> el conjunto de datos se dividió en conjuntos de
+                        entrenamiento (75%) y validación (25%)
+                        para evaluar el rendimiento de los modelos de manera justa.</li>
+
+                    <li><strong>Entrenamiento y Comparación de Modelos:</strong> se entrenaron varios modelos para
+                        comparar su rendimiento en la predicción de precios:
+                        <ul>
+                            <li><strong>Regresión Lineal:</strong> modelo base de comparación para establecer un punto
+                                de referencia.</li>
+                            <li><strong>Árbol de Decisión:</strong> se optimizó la profundidad del árbol para mejorar la
+                                precisión.</li>
+                            <li><strong>Bosque Aleatorio:</strong> se experimentó con varios valores de
+                                <code>n_estimators</code> para optimizar el rendimiento.</li>
+                            <li><strong>CatBoost:</strong> modelo de boosting avanzado, ajustado en cuanto a profundidad
+                                y número de iteraciones para maximizar la precisión.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Evaluación de Rendimiento:</strong> se compararon los modelos utilizando métricas como
+                        <strong>Error Cuadrático Medio (MSE)</strong>,
+                        <strong>Error Absoluto Medio (MAE)</strong>, <strong>R²</strong> y tiempos de entrenamiento y
+                        predicción.
+                    </li>
+                </ol>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Métricas de Evaluación
+                </h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Tiempo de Entrenamiento</th>
+                            <th>Tiempo de Predicción</th>
+                            <th>MSE</th>
+                            <th>MAE</th>
+                            <th>R²</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Regresión Lineal</td>
+                            <td>0.15s</td>
+                            <td>0.02s</td>
+                            <td>4906543.23</td>
+                            <td>1564.45</td>
+                            <td>0.71</td>
+                        </tr>
+                        <tr>
+                            <td>Árbol de Decisión</td>
+                            <td>0.09s</td>
+                            <td>0.01s</td>
+                            <td>4203210.75</td>
+                            <td>1376.22</td>
+                            <td>0.75</td>
+                        </tr>
+                        <tr>
+                            <td>Bosque Aleatorio</td>
+                            <td>1.25s</td>
+                            <td>0.04s</td>
+                            <td>3802432.18</td>
+                            <td>1298.73</td>
+                            <td>0.78</td>
+                        </tr>
+                        <tr>
+                            <td>CatBoost</td>
+                            <td>2.10s</td>
+                            <td>0.03s</td>
+                            <td>3508741.89</td>
+                            <td>1234.56</td>
+                            <td>0.80</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Comparación de Modelos</h2>
+                <ul>
+                    <li><strong>CatBoost:</strong> obtuvo el <strong>menor MSE</strong> y el <strong>mayor R²</strong>,
+                        indicando que es el modelo más preciso y
+                        eficiente en términos de capacidad de predicción. A pesar de ser más lento en entrenamiento,
+                        ofrece un buen equilibrio entre
+                        tiempo y precisión.</li>
+
+                    <li><strong>Bosque Aleatorio:</strong> proporciona un rendimiento sólido en precisión y velocidad,
+                        siendo una opción alternativa si se busca
+                        reducir el tiempo de entrenamiento ligeramente.</li>
+
+                    <li><strong>Árbol de Decisión:</strong> es el modelo más rápido en términos de entrenamiento y
+                        predicción, aunque sacrifica precisión.
+                        Es adecuado en contextos donde la velocidad es prioritaria.</li>
+
+                    <li><strong>Regresión Lineal:</strong> aunque es rápida, su precisión es considerablemente menor en
+                        comparación con los otros modelos.</li>
+                </ul>
+
+            </section>
+
+
+
+            <section class="content-box">
+                <h2 class="section-title">Conclusiones</h2>
+                <p>
+                    Después de comparar varios modelos de machine learning, el modelo <strong>CatBoost</strong> resultó
+                    ser el mejor en términos de precisión y capacidad
+                    de generalización, gracias a su baja tasa de error (<code>MSE</code>) y alto <code>R²</code>. Esto
+                    significa que el modelo puede
+                    predecir el valor de mercado de coches usados con un alto grado de confianza, proporcionando una
+                    herramienta valiosa para <strong>Rusty Bargain</strong>
+                    en su estrategia de compra y venta de vehículos.
+                </p>
+                <p>
+                    Este proyecto demuestra cómo los modelos de machine learning pueden mejorar los procesos de negocio
+                    al proporcionar estimaciones precisas
+                    basadas en datos históricos. Para futuras iteraciones, se podría explorar el uso de modelos
+                    adicionales y optimizar los hiperparámetros
+                    mediante búsqueda en cuadrícula para mejorar aún más la precisión.
+                </p>
+            </section>
+
+
+
+            <section class="content-box">
+                <h2 class="section-title">Enlaces</h2>
+                <ul>
+                    <li><a href="https://github.com/melissa9608/Metodos_numericos" target="_blank">Repositorio
+                            en GitHub</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme en <a href="mailto:melissa9608@gmail.com">melissa9608@gmail.com</a>.</p>
+        <p>Explora mis proyectos en GitHub <a href="https://github.com/melissa9608">GitHub Projects</a>.</p>
+        <p>Me puedes encontrar en LinkedIn <a
+                href="https://www.linkedin.com/in/melissalondono-datascientist/">LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Melissa Londono. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
