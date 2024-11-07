@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Datos de Viajes Compartidos para Zuber en Chicago</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Enlace al archivo CSS -->
+    <link rel="icon" href="images/favicoin.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <header class="project-header">
+        <h1>Análisis de Datos de Viajes Compartidos para Zuber en Chicago</h1>
+
+        <nav class="navbar">
+            <a href="../index.html" class="navbar-logo">INICIO</a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#acerca">¿QUIEN SOY?</a></li>
+                <li><a href="../index.html#proyectos">PROYECTOS</a></li>
+                <li><a href="../index.html#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="containerpr">
+
+
+        <div class="project-details">
+            <img src="proyecto3.png" alt="Imagen Proyecto 3" class="project-image">
+            <section class="content-box">
+                <h2 class="section-title">Descripción del Proyecto</h2>
+                <p>Zuber, una nueva empresa de viajes compartidos que inicia operaciones en Chicago, busca entender
+                    mejor las preferencias de los usuarios y el impacto de diversos factores externos en la demanda de
+                    sus servicios. Este proyecto se enfoca en analizar los datos de viajes históricos de competidores
+                    para identificar patrones en el comportamiento de los pasajeros y evaluar cómo el clima y otros
+                    factores externos influyen en la frecuencia de los viajes.
+                </p>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Objetivo del proyecto</h2>
+                <p>El objetivo principal es identificar patrones de comportamiento de los usuarios en base a su destino
+                    y frecuencia de viaje, así como evaluar la hipótesis de que las condiciones climáticas afectan la
+                    demanda de viajes en diferentes días de la semana. Esto ayudará a Zuber a diseñar estrategias que
+                    optimicen la oferta de viajes y mejoren la experiencia de usuario.
+                </p>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Metodología</h2>
+
+                <h3>1. Recopilación y Preparación de Datos:</h3>
+                <ul>
+                    <li>Se han importado datos en archivos CSV que contienen información sobre empresas de taxis,
+                        barrios en los que finalizan los viajes, y condiciones climáticas.</li>
+                    <li>La estructura de los datos ha sido revisada y limpiada, asegurando que no existan valores
+                        ausentes ni duplicados en los conjuntos de datos.</li>
+                    <li>Se ha realizado la conversión de datos de tiempo a formato de fecha para mejorar el análisis
+                        temporal.</li>
+                </ul>
+
+                <h3>2. Análisis Exploratorio de Datos (EDA)</h3>
+                <ul>
+                    <li>Se ha analizado la cantidad de viajes por compañía de taxis para entender la competencia en el
+                        mercado de transporte compartido. Los datos indican que ciertas empresas, como Flash Cab, tienen
+                        un alto volumen de viajes, lo cual sugiere su popularidad en Chicago.</li>
+                    <li>Los barrios donde se finalizan más viajes también se han evaluado, mostrando que zonas como Loop
+                        y River North tienen la mayor cantidad promedio de viajes, señalando áreas de alta demanda en la
+                        ciudad.</li>
+
+                </ul>
+
+                <h3>3. Visualización de Datos</h3>
+                <p>Se han creado gráficos de barras que representan las principales empresas de taxis y los barrios más
+                    frecuentes para finalizar los viajes. Estas visualizaciones permiten identificar las áreas y
+                    empresas más activas en términos de servicios de transporte, facilitando una mejor comprensión de la
+                    competencia y demanda por zonas.</p>
+
+
+                <h3>4. Prueba de Hipótesis</h3>
+                <ul>
+                    <il>Para evaluar la influencia del clima en la duración de los viajes, se realizó una prueba de
+                        hipótesis comparando la duración promedio de los viajes entre el centro de Chicago (Loop) y el
+                        Aeropuerto Internacional O'Hare en diferentes condiciones climáticas y días de la semana</il>
+                    <il>Hipótesis Nula (H0): No hay diferencia significativa en la duración promedio de los viajes desde
+                        Loop a O'Hare los sábados en comparación con otros días.</il>
+                    <il>Hipótesis Alternativa (H1): Existe una diferencia significativa en la duración promedio de los
+                        viajes entre Loop y O'Hare dependiendo del día y las condiciones climáticas.</il>
+                </ul>
+            </section>
+
+
+            <section class="content-box">
+                <h2 class="section-title">Conclusiones</h2>
+                <p>A través de este análisis, se identificaron áreas clave en Chicago con alta demanda de viajes y se
+                    observaron patrones que sugieren una correlación entre las condiciones climáticas y la frecuencia de
+                    viajes. Los resultados proporcionan a Zuber una base para ajustar sus estrategias de operación y
+                    mejorar la satisfacción del cliente al ofrecer una oferta de viajes optimizada según la demanda en
+                    diferentes condiciones y zonas de la ciudad.</p>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Herramientas y Tecnologías Utilizadas</h2>
+                <ul>
+                    <il>SQL para el manejo y consulta de datos estructurados.</il>
+                    <il>Python y bibliotecas como pandas, numpy, matplotlib, y seaborn para el análisis de datos,
+                        visualización y pruebas estadísticas.</il>
+                    <il>Pruebas de Hipótesis para validar supuestos sobre la influencia del clima en la frecuencia y
+                        duración de los viajes.</il>
+                </ul>
+            </section>
+
+
+
+            <section class="content-box">
+                <h2 class="section-title">Enlaces</h2>
+                <ul>
+                    <li><a href="https://github.com/melissa9608/Recopilacion_y_almacenamiento_de_datos_SQL"
+                            target="_blank">Repositorio
+                            en GitHub</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme en <a href="mailto:melissa9608@gmail.com">melissa9608@gmail.com</a>.</p>
+        <p>Explora mis proyectos en GitHub <a href="https://github.com/melissa9608">GitHub Projects</a>.</p>
+        <p>Me puedes encontrar en LinkedIn <a
+                href="https://www.linkedin.com/in/melissalondono-datascientist/">LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Melissa Londono. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
