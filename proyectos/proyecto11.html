@@ -124,8 +124,8 @@
                         determinar cuál ofrece el mejor rendimiento.</li>
                 </ul>
 
-                <h2>5. Fragmentos de Código</h2>
-                <h3>Preprocesamiento de Texto</h3>
+                <h3>Fragmentos de Código</h3>
+                <h4>Preprocesamiento de Texto</h4>
                 <pre>
 # Preprocesamiento de textos
 train_processed_4 = text_preprocessing_4(df_reviews_train['review_norm'])
@@ -155,7 +155,8 @@ def evaluate_model_lgbm(model, train_features, train_target, test_features, test
     }
 
     for metric, score in metrics.items():
-        print(f'{metric} - Train: {accuracy_score(train_target, model.predict(train_features)):.2f}, 
+        print(f'{metric} - Train: {accuracy_score(train_target, 
+            model.predict(train_features)):.2f}, 
         Test: {score:.2f}')
     </pre>
 
