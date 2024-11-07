@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predicción de Deserción de Clientes para Optimizar la Retención en Beta Bank</title>
     <link rel="stylesheet" href="../style.css"> <!-- Enlace al archivo CSS -->
-    <link rel="icon" href="images/favicoin.png" type="image/x-icon">
+    <link rel="icon" href="favicoin.png" type="image/x-icon">
 </head>
 
 <body>
@@ -31,8 +31,9 @@
         <div class="project-details">
             <img src="proyecto6.jpg" alt="Imagen Proyecto 6" class="project-image">
             <section class="content-box">
-                <h2 class="section-title">Descripción del Proyecto</h2>
-                <p>El propósito de este proyecto es desarrollar un modelo de aprendizaje supervisado que prediga si un
+                <h2 class="section-title">Predicción de Deserción de Clientes para Optimizar la Retención en Beta Bank
+                </h2>
+                <p> El propósito de este proyecto es desarrollar un modelo de aprendizaje supervisado que prediga si un
                     cliente abandonará el banco, permitiendo que Beta Bank optimice sus esfuerzos de retención. Para
                     medir el rendimiento del modelo, el principal objetivo fue maximizar el valor de F1 Score, exigiendo
                     un mínimo de 0.59. Además, se evaluó la métrica AUC-ROC para medir la capacidad del modelo en la
@@ -41,54 +42,131 @@
             </section>
 
 
+            <section class="content-box">
+                <h2 class="section-title">Herramientas Utilizadas
+                </h2>
+                <ul>
+                    <li>Pandas: Para el procesamiento y limpieza de datos.</li>
+                    <li>Scikit-Learn (sklearn): Incluyendo módulos para la división de datos, balanceo de clases,
+                        construcción y ajuste de modelos, y cálculo de métricas de rendimiento.</li>
+                    <li>RandomForestClassifier: Como algoritmo principal de clasificación.
+                    </li>
+                    <li>Métricas: f1_score para la precisión en la clase minoritaria, y roc_auc_score para la
+                        discriminación entre clases.</li>
+
+                </ul>
+            </section>
 
             <section class="content-box">
-                <h2 class="section-title">Metodología</h2>
+                <h2 class="section-title">Procesamiento y Análisis de Datos</h2>
 
-                <h3>1. Preparación de los Datos</h3>
+                <p>Se analizaron los datos proporcionados, que incluían información demográfica y de comportamiento de
+                    los clientes de Beta Bank. Durante la preparación de datos:</p>
+
+                <h3>1. Manejo de Valores Ausentes:</h3>
+                <p>Se detectaron valores faltantes en la columna Tenure (909 valores nulos), los cuales fueron
+                    reemplazados con ceros para mantener la consistencia sin perder información significativa.</p>
+
+                <h3>2. Eliminación de Columnas Irrelevantes</h3>
+                <p>Las columnas RowNumber, CustomerId y Surname fueron eliminadas
+                    ya que no aportan valor a la predicción.</p>
+
+                <h3>3. Codificación de Variables Categóricas</h3>
+                <p>Las variables categóricas Geography y Gender fueron
+                    convertidas a variables dummies mediante One-Hot Encoding (OHE).</p>
+
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Análisis de la Distribución de Clases
+                </h2>
+
+                <p>Se identificó un desequilibrio significativo en la variable de destino Exited</p>
                 <ul>
-                    <li>Se importaron las librerías necesarias (pandas, sklearn) y se cargó el dataset.</li>
-                    <li>El dataset contiene cinco columnas: calls, minutes, messages, mb_used y is_ultra (0 para "Smart"
-                        y 1 para "Ultra"), lo que permite abordar el problema como una clasificación binaria.</li>
-
+                    <li>Clase 0 (Clientes que permanecen): 7,963</li>
+                    <li>Clase 1 (Clientes que abandonan): 2,037</li>
                 </ul>
 
-                <h3>2. Segmentación de Datos</h3>
-                <ul>
-                    <li>La variable objetivo es is_ultra..</li>
-                    <li>Se dividieron los datos en un conjunto de entrenamiento (60%), validación (20%) y prueba (20%)
-                        para evaluar y ajustar el modelo sin riesgo de sobreajuste.</li>
+                <p>Este desequilibrio podía influir negativamente en la precisión del modelo, reduciendo el rendimiento
+                    en la predicción de la clase minoritaria.</p>
+            </section>
 
+            <section class="content-box">
+                <h2 class="section-title">Entrenamiento del Modelo
+                </h2>
+
+                <p>Los datos se dividieron en:</p>
+                <ul>
+                    <li>Conjunto de prueba (20%)</li>
+                    <li>Conjunto de validación (20%) y entrenamiento (60%)</li>
                 </ul>
 
-                <h3>3. Entrenamiento de Modelos</h3>
+                <p>Se utilizó el modelo RandomForestClassifier para la predicción inicial sin corregir el desequilibrio.
+                    Los resultados fueron:</p>
                 <ul>
-                    <il>Se investigaron tres algoritmos de clasificación: Regresión Logística, Árbol de Decisión y
-                        Bosque Aleatorio.</il>
-                    <il>Regresión Logística: Se probaron los solvers liblinear y lbfgs. La mejor precisión fue 0.72 con
-                        liblinear.</il>
-                    <il>Árbol de Decisión: Se ajustó el hiperparámetro max_depth, obteniendo una precisión de 0.76 con
-                        max_depth=3.</il>
-                    <il>Bosque Aleatorio: Este modelo ofreció los mejores resultados con n_estimators=100, alcanzando
-                        una precisión de 0.79 en el conjunto de validación.</il>
+                    <li>AUC-ROC Score: 0.847</li>
+                    <li>F1 Score: 0.565</li>
+                </ul>
+
+                <p>La buena puntuación en AUC-ROC indicaba que el modelo distinguía relativamente bien entre las clases,
+                    pero el F1 Score menor a 0.59 sugería que la precisión en la predicción de la clase minoritaria no
+                    era óptima, reflejando la necesidad de un balanceo de clases.</p>
+            </section>
+
+
+            <section class="content-box">
+                <h2 class="section-title">Mejora del Modelo mediante Balanceo de Clases
+                </h2>
+
+                <p>Para mejorar la predicción de la clase minoritaria, se aplicaron dos técnicas de balanceo:</p>
+                <ul>
+                    <li>Sobremuestreo (Upsampling): Aumento de la clase minoritaria mediante la duplicación de ejemplos
+                        para igualarla con la clase mayoritaria.</li>
+                    <li>Submuestreo (Downsampling): Reducción de ejemplos de la clase mayoritaria para igualarla a la
+                        clase minoritaria.</li>
+                </ul>
+
+                <p>Se probaron varias combinaciones de hiperparámetros (n_estimators y max_depth) en el modelo
+                    RandomForestClassifier, evaluando cada modelo con conjuntos sobremuestreados y submuestreados, y
+                    seleccionando el mejor modelo en función del F1 Score en el conjunto de validación.</p>
+
+                <h4>Mejor Modelo Seleccionado:</h4>
+                <p>Hiperparámetros:</p>
+                <ul>
+                    <li>n_estimators: 100</li>
+                    <li>max_depth: 18</li>
+                </ul>
+            </section>
+
+            <section class="content-box">
+                <h2 class="section-title">Evaluación Final del Modelo
+                </h2>
+
+                <p>En la prueba final con el conjunto de prueba, los resultados del mejor modelo fueron:</p>
+                <ul>
+                    <li>F1 Score: Logró cumplir el umbral de 0.59 requerido.</li>
+                    <li>AUC-ROC: Se mantuvo alto, reforzando la capacidad de discriminación entre clientes que
+                        permanecen y los que abandonan.</li>
                 </ul>
 
 
-                <h3>4. Evaluación de Modelos</h3>
-                <p>Los modelos fueron evaluados con el conjunto de prueba, y el Bosque Aleatorio resultó ser el mejor
-                    modelo con una precisión de 0.79, superando el umbral de exactitud de 0.75.</p>
-
-                <h3>4. Prueba de Cordura</h3>
-                <p>Se realizó una prueba de cordura para validar que el modelo final, Bosque Aleatorio con
-                    n_estimators=100, generaliza correctamente y no está sobreajustado.</p>
             </section>
 
 
             <section class="content-box">
                 <h2 class="section-title">Conclusiones</h2>
-                <p>El modelo de Bosque Aleatorio con n_estimators=100 fue seleccionado por su alta exactitud en la
-                    clasificación entre los planes Smart y Ultra, demostrando ser efectivo y confiable para recomendar
-                    el plan adecuado según el comportamiento del cliente.</p>
+                <ul>
+                    <li>Optimización del Modelo: La aplicación de técnicas de balanceo fue clave para mejorar el
+                        rendimiento del modelo en la predicción de clientes que abandonan, alcanzando el umbral de F1
+                        deseado.</li>
+                    <li>Impacto en la Retención de Clientes: Con este modelo, Beta Bank podría identificar a los
+                        clientes en riesgo de abandonar y desarrollar estrategias de retención más efectivas y
+                        personalizadas, optimizando sus recursos y reduciendo costos asociados con la adquisición de
+                        nuevos clientes.</li>
+                    <li>Interpretación del Modelo: Un AUC-ROC alto indica que el modelo tiene una buena capacidad de
+                        clasificación, aunque el bajo F1 inicial destacó la importancia del balanceo para una mejor
+                        precisión en la clase minoritaria.</li>
+                </ul>
             </section>
 
 
